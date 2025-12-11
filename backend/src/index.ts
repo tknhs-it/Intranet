@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { PrismaClient } from '@prisma/client';
+import { errorHandler, notFoundHandler } from './middleware/errorHandler';
+import healthRouter from './routes/health';
 
 // Load environment variables
 dotenv.config();
@@ -19,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Health check routes
-app.use('/api/health', require('./routes/health').default);
+app.use('/api/health', healthRouter);
 
 // API Routes
 app.use('/api/auth', require('./routes/auth').default);
@@ -37,13 +39,7 @@ app.use('/api/sharepoint', require('./routes/sharepoint').default);
 app.use('/api/dashboard', require('./routes/dashboard-merged').default);
 app.use('/api/daily-org', require('./routes/daily-org').default);
 
-// 404 handler
-app.use((req: express.Request, res: express.Response) => {
-  res.status(404).json({ error: 'Route not found' });
-});
-
-// Error handling middleware
-import { errorHandler, notFoundHandler } from './middleware/errorHandler';
+// Error handling middleware (404 handler must come before error handler)
 app.use(notFoundHandler);
 app.use(errorHandler);
 
