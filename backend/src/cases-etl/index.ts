@@ -9,6 +9,10 @@ import { mapStudent, mapStaff, mapEnrolment, mapParent } from './mapping/modelMa
 import { upsertStudents } from './db/upsert/students';
 import { upsertStaff } from './db/upsert/staff';
 import { logger } from './util/logger';
+import { retry } from './util/retry';
+import { createSnapshot, shouldRollback } from './db/rollback';
+import { etlNotifier } from './notifications/etlNotifier';
+import { etlMetrics, EtlMetrics } from './monitoring/etlMetrics';
 
 const CASES_DIRECTORY = process.env.CASES_DIRECTORY || '/mnt/cases-nightly/';
 const CASES_ARCHIVE_DIRECTORY = process.env.CASES_ARCHIVE_DIRECTORY || '/mnt/cases-archive/';
@@ -35,21 +39,52 @@ export async function runEtl(): Promise<{
     parents: 0,
   };
 
+  let snapshotId: string | null = null;
+  const startTime = new Date();
+  let metrics: EtlMetrics = {
+    startTime,
+    filesProcessed: 0,
+    recordsProcessed: 0,
+    recordsCreated: 0,
+    recordsUpdated: 0,
+    recordsErrored: 0,
+    errorRate: 0,
+    success: false,
+  };
+
   try {
     logger.info({ directory: CASES_DIRECTORY }, 'Starting CASES ETL');
 
-    // Initialize file loader
-    const loader = new CasesFileLoader(CASES_DIRECTORY);
-    
-    // Validate directory exists
-    const dirExists = await loader.validateDirectory();
-    if (!dirExists) {
-      throw new Error(`CASES directory not found: ${CASES_DIRECTORY}`);
+    // Create snapshot before processing
+    try {
+      snapshotId = await createSnapshot();
+      logger.info({ snapshotId }, 'Created pre-ETL snapshot');
+    } catch (error: any) {
+      logger.warn({ error: error.message }, 'Failed to create snapshot, continuing anyway');
     }
 
-    // Load all CASES files
-    const files = await loader.loadAll();
-    logger.info({ fileCount: Object.keys(files).length }, 'Loaded CASES files');
+    // Initialize file loader with retry
+    const loader = new CasesFileLoader(CASES_DIRECTORY);
+    
+    // Validate directory exists with retry
+    const dirExists = await retry(
+      async () => {
+        const exists = await loader.validateDirectory();
+        if (!exists) {
+          throw new Error(`CASES directory not found: ${CASES_DIRECTORY}`);
+        }
+        return exists;
+      },
+      { maxAttempts: 3, delayMs: 2000 }
+    );
+
+    // Load all CASES files with retry
+    const files = await retry(
+      () => loader.loadAll(),
+      { maxAttempts: 3, delayMs: 1000 }
+    );
+    metrics.filesProcessed = Object.keys(files).length;
+    logger.info({ fileCount: metrics.filesProcessed }, 'Loaded CASES files');
 
     // Process STUDENTS
     if (files['STUDENT.DAT']) {
@@ -67,6 +102,10 @@ export async function runEtl(): Promise<{
         const students = valid.map(mapStudent);
         const result = await upsertStudents(students);
         stats.students = result;
+        metrics.recordsProcessed += rawStudents.length;
+        metrics.recordsCreated += result.created;
+        metrics.recordsUpdated += result.updated;
+        metrics.recordsErrored += result.errors;
         logger.info(result, 'Upserted students');
       } catch (error: any) {
         logger.error({ error: error.message }, 'Failed to process students');
@@ -90,6 +129,10 @@ export async function runEtl(): Promise<{
         const staff = valid.map(mapStaff);
         const result = await upsertStaff(staff);
         stats.staff = result;
+        metrics.recordsProcessed += rawStaff.length;
+        metrics.recordsCreated += result.created;
+        metrics.recordsUpdated += result.updated;
+        metrics.recordsErrored += result.errors;
         logger.info(result, 'Upserted staff');
       } catch (error: any) {
         logger.error({ error: error.message }, 'Failed to process staff');
@@ -153,15 +196,68 @@ export async function runEtl(): Promise<{
       errors.push(`Archive: ${error.message}`);
     }
 
-    logger.info({ stats, errors }, 'CASES ETL completed');
+    // Finalize metrics
+    metrics.endTime = new Date();
+    metrics.duration = metrics.endTime.getTime() - metrics.startTime.getTime();
+    metrics.errorRate = metrics.recordsProcessed > 0 
+      ? metrics.recordsErrored / metrics.recordsProcessed 
+      : 0;
+    metrics.success = errors.length === 0;
+
+    logger.info({ stats, errors, metrics }, 'CASES ETL completed');
+
+    // Record metrics
+    etlMetrics.recordMetrics(metrics);
+
+    // Calculate error rate
+    const errorRate = metrics.errorRate;
+
+    // Check if rollback is needed
+    if (shouldRollback(errorRate)) {
+      logger.error({ errorRate, threshold: 0.1 }, 'High error rate detected, rollback recommended');
+      errors.push(`High error rate: ${(errorRate * 100).toFixed(2)}%`);
+    }
+
+    // Send notifications
+    if (errors.length === 0) {
+      await etlNotifier.notifySuccess(stats).catch(err => 
+        logger.error({ error: err.message }, 'Failed to send success notification')
+      );
+    } else if (errorRate < 0.1) {
+      await etlNotifier.notifyWarning(
+        `ETL completed with ${errors.length} warning(s)`,
+        stats,
+        errors
+      ).catch(err => 
+        logger.error({ error: err.message }, 'Failed to send warning notification')
+      );
+    } else {
+      await etlNotifier.notifyError(
+        'ETL completed with critical errors',
+        errors,
+        stats
+      ).catch(err => 
+        logger.error({ error: err.message }, 'Failed to send error notification')
+      );
+    }
 
     return {
-      success: errors.length === 0,
+      success: errors.length === 0 && errorRate < 0.1,
       stats,
       errors,
     };
   } catch (error: any) {
-    logger.error({ error: error.message }, 'CASES ETL failed');
+    logger.error({ error: error.message, snapshotId }, 'CASES ETL failed');
+
+    // Send error notification
+    await etlNotifier.notifyError(
+      `ETL failed: ${error.message}`,
+      [...errors, error.message],
+      stats
+    ).catch(err => 
+      logger.error({ error: err.message }, 'Failed to send error notification')
+    );
+
     return {
       success: false,
       stats,

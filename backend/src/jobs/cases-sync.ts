@@ -29,9 +29,14 @@ export const casesWorker = new Worker(
       
       logger.info({ result }, 'CASES ETL job completed');
       
+      // Update job progress
+      await job.updateProgress(100);
+      
       return result;
     } catch (error: any) {
-      logger.error({ error: error.message }, 'CASES ETL job failed');
+      logger.error({ error: error.message, jobId: job.id }, 'CASES ETL job failed');
+      
+      // Job will be retried automatically by BullMQ if configured
       throw error;
     }
   },
@@ -41,6 +46,11 @@ export const casesWorker = new Worker(
       port: REDIS_PORT,
     },
     concurrency: 1, // Only one ETL job at a time
+    attempts: 3, // Retry failed jobs up to 3 times
+    backoff: {
+      type: 'exponential',
+      delay: 5000, // Start with 5 second delay
+    },
   }
 );
 
