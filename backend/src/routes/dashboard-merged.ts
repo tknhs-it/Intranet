@@ -3,6 +3,7 @@ import { authenticateAzure, AuthenticatedRequest } from '../middleware/auth-azur
 import { dataMergeService } from '../services/data-merge';
 import { PrismaClient } from '@prisma/client';
 import compassService from '../services/compass';
+import { logger } from '../cases-etl/util/logger';
 
 const router = Router();
 const prisma = new PrismaClient();
@@ -21,24 +22,55 @@ router.get('/merged', async (req: AuthenticatedRequest, res) => {
     }
 
     // Find staff by Azure AD object ID or email
-    const staff = await prisma.user.findFirst({
-      where: {
-        OR: [
-          { email: req.user?.email || '' },
-          // TODO: Add Azure AD object ID mapping
-        ],
-      },
-    });
+    // First try to find by Azure AD object ID (if we have it stored)
+    // Then fall back to email matching
+    const userEmail = req.user?.email || req.user?.preferred_username || '';
+    const azureObjectId = req.user?.oid || req.userId;
+
+    let staff = null;
+
+    // Try to find by email first (most reliable)
+    if (userEmail) {
+      staff = await prisma.user.findFirst({
+        where: {
+          email: {
+            equals: userEmail,
+            mode: 'insensitive', // Case-insensitive match
+          },
+        },
+      });
+    }
+
+    // If not found and we have Azure object ID, try that
+    // (This requires adding azureObjectId field to User table)
+    if (!staff && azureObjectId) {
+      // TODO: Add azureObjectId field to User schema
+      // staff = await prisma.user.findFirst({
+      //   where: { azureObjectId },
+      // });
+    }
 
     if (!staff) {
-      return res.status(404).json({ error: 'Staff member not found' });
+      logger.warn(
+        { 
+          email: userEmail, 
+          azureObjectId,
+          user: req.user 
+        }, 
+        'Staff member not found in database'
+      );
+      return res.status(404).json({ 
+        error: 'Staff member not found',
+        message: 'Your account was not found in the system. Please contact IT support.',
+        email: userEmail,
+      });
     }
 
     // Get merged dashboard data
     const dashboard = await dataMergeService.getTodayDashboard(staff.id);
 
     // Get staff absences (mock for now, will integrate with Compass)
-    const staffAway = await this.getStaffAbsencesToday().catch(() => []);
+    const staffAway = await getStaffAbsencesToday().catch(() => []);
 
     // Get announcements
     const announcements = await prisma.announcement.findMany({
