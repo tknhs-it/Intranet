@@ -20,9 +20,9 @@ router.get('/', async (req, res) => {
     },
   };
 
-  // Check database
+  // Check database (works with both PostgreSQL and SQL Server)
   try {
-    await prisma.$queryRaw`SELECT 1`;
+    await prisma.$queryRaw`SELECT 1 as test`;
     health.services.database = 'ok';
   } catch (error) {
     health.services.database = 'error';
@@ -62,8 +62,8 @@ router.get('/', async (req, res) => {
  */
 router.get('/ready', async (req, res) => {
   try {
-    // Check database connection
-    await prisma.$queryRaw`SELECT 1`;
+    // Check database connection (works with both PostgreSQL and SQL Server)
+    await prisma.$queryRaw`SELECT 1 as test`;
     res.status(200).json({ status: 'ready' });
   } catch (error) {
     res.status(503).json({ status: 'not_ready', error: 'Database unavailable' });

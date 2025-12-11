@@ -1,0 +1,361 @@
+// SQL Server version of Prisma schema
+// Copy this to schema.prisma if using SQL Server
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+// User model - synced with CASES
+model User {
+  id            String   @id @default(cuid())
+  casesId       String?  @unique
+  email         String   @unique
+  firstName     String
+  lastName      String
+  role          UserRole
+  department    String?
+  position      String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  announcements Announcement[]
+  helpdeskTickets HelpdeskTicket[]
+  forms         FormSubmission[]
+  roomBookings  RoomBooking[]
+  pdRecords     PDRecord[]
+  tasks         Task[]
+
+  @@index([email])
+  @@index([casesId])
+}
+
+enum UserRole {
+  TEACHER
+  ADMIN
+  LEADERSHIP
+  MAINTENANCE
+  ICT
+  LIBRARIAN
+  COUNSELLOR
+}
+
+// Student model - synced from CASES
+model Student {
+  id            String   @id @default(cuid())
+  cases_id      String   @unique
+  first_name    String
+  last_name     String
+  date_of_birth DateTime?
+  sex           String?  // MALE, FEMALE
+  year_level    Int?
+  home_group    String?
+  house         String?
+  email         String?
+  phone         String?
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([cases_id])
+  @@index([year_level])
+  @@index([home_group])
+}
+
+// Staff Dashboard Data
+model Dashboard {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  widgets   Json     // Customizable widget configuration
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Rooms and Availability
+model Room {
+  id          String   @id @default(cuid())
+  code        String   @unique // e.g., "A101", "LAB1"
+  name        String
+  building    String
+  floor       Int?
+  capacity    Int?
+  type        RoomType
+  equipment   String   @default("[]") // JSON array stored as string in SQL Server
+  compassRoomId String? // Link to Compass room ID
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  bookings    RoomBooking[]
+  timetable   RoomTimetable[]
+
+  @@index([code])
+  @@index([building])
+}
+
+enum RoomType {
+  CLASSROOM
+  LAB
+  LIBRARY
+  HALL
+  OFFICE
+  MEETING_ROOM
+  SPECIALIST
+}
+
+model RoomBooking {
+  id          String   @id @default(cuid())
+  roomId      String
+  room        Room     @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  startTime   DateTime
+  endTime     DateTime
+  purpose     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([roomId, startTime, endTime])
+}
+
+model RoomTimetable {
+  id          String   @id @default(cuid())
+  roomId      String
+  room        Room     @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  period      Int
+  day         Int      // 1-5 for Mon-Fri
+  className   String?
+  teacherId   String?
+  compassClassId String?
+  term        Int
+  year        Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([roomId, period, day, term, year])
+  @@index([roomId, term, year])
+}
+
+// Announcements
+model Announcement {
+  id          String   @id @default(cuid())
+  title       String
+  content     String   @db.NVarChar(Max)
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  tags        String   @default("[]") // JSON array stored as string
+  priority    Priority @default(NORMAL)
+  isPinned    Boolean  @default(false)
+  expiresAt   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  comments    AnnouncementComment[]
+
+  @@index([isPinned, createdAt])
+}
+
+enum Priority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}
+
+model AnnouncementComment {
+  id             String      @id @default(cuid())
+  announcementId String
+  announcement   Announcement @relation(fields: [announcementId], references: [id], onDelete: Cascade)
+  authorId       String
+  content        String      @db.NVarChar(Max)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+// Helpdesk System
+model HelpdeskTicket {
+  id          String   @id @default(cuid())
+  ticketNumber String  @unique @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type        TicketType
+  category    String   // e.g., "Hardware", "Software", "Network", "Plumbing", "Electrical"
+  title       String
+  description String   @db.NVarChar(Max)
+  status      TicketStatus @default(OPEN)
+  priority    Priority @default(NORMAL)
+  location    String?  // Room code or location
+  photos      String   @default("[]") // JSON array stored as string
+  assignedTo  String?  // User ID of assignee
+  resolvedAt  DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  updates     TicketUpdate[]
+
+  @@index([status, createdAt])
+  @@index([type, status])
+  @@index([userId])
+}
+
+enum TicketType {
+  ICT
+  MAINTENANCE
+}
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+  CANCELLED
+}
+
+model TicketUpdate {
+  id          String        @id @default(cuid())
+  ticketId    String
+  ticket      HelpdeskTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  userId      String
+  content     String        @db.NVarChar(Max)
+  status      TicketStatus?
+  createdAt   DateTime      @default(now())
+}
+
+// Resource Library
+model Resource {
+  id          String   @id @default(cuid())
+  title       String
+  description String?  @db.NVarChar(Max)
+  type        ResourceType
+  category    String   // e.g., "VCE", "Year 7", "Maths", "Science"
+  tags        String   @default("[]") // JSON array stored as string
+  fileUrl     String?  // URL to file storage
+  externalUrl String?  // Link to external resource
+  authorId    String
+  isPublic    Boolean  @default(true)
+  downloadCount Int    @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([type, category])
+}
+
+enum ResourceType {
+  LESSON_PLAN
+  ASSESSMENT
+  RUBRIC
+  CURRICULUM_MAP
+  SAC
+  EXAM
+  UNIT_PLAN
+  EXCURSION
+  TEMPLATE
+}
+
+// Digital Forms
+model Form {
+  id          String   @id @default(cuid())
+  name        String
+  description String?  @db.NVarChar(Max)
+  category    String   // e.g., "Excursion", "PD", "Incident"
+  schema      Json     // Form field definitions
+  workflow    Json?    // Approval workflow configuration
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  submissions FormSubmission[]
+
+  @@index([category, isActive])
+}
+
+model FormSubmission {
+  id          String   @id @default(cuid())
+  formId      String
+  form        Form     @relation(fields: [formId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  data        Json     // Form submission data
+  status      SubmissionStatus @default(PENDING)
+  currentStep Int      @default(0)
+  approvers   Json?    // Approval chain
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([formId, status])
+  @@index([userId])
+}
+
+enum SubmissionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED
+}
+
+// Professional Development
+model PDRecord {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  description String?  @db.NVarChar(Max)
+  provider    String?
+  hours       Float
+  date        DateTime
+  category    String?  // e.g., "VIT", "Curriculum", "Wellbeing"
+  evidenceUrl String?  // Link to certificate/evidence
+  status      PDStatus @default(PENDING)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId, date])
+}
+
+enum PDStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+// Tasks (from Compass + O365)
+model Task {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  description String?  @db.NVarChar(Max)
+  source      TaskSource
+  sourceId    String?  // External ID from Compass/O365
+  dueDate     DateTime?
+  completed   Boolean  @default(false)
+  priority    Priority @default(NORMAL)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId, completed, dueDate])
+}
+
+enum TaskSource {
+  COMPASS
+  O365
+  INTRANET
+}
+
+// Analytics & Reporting
+model AnalyticsEvent {
+  id          String   @id @default(cuid())
+  userId      String?
+  eventType   String   // e.g., "page_view", "resource_download", "form_submit"
+  eventData   Json?
+  timestamp   DateTime @default(now())
+
+  @@index([eventType, timestamp])
+  @@index([userId, timestamp])
+}
+
