@@ -1,0 +1,7164 @@
+{
+  "primary_keys": {
+    "CRF_8865": [
+      "ATKEY",
+      "CODE",
+      "TID"
+    ],
+    "CR_8865": [
+      "AIMSKEY",
+      "CRKEY",
+      "PPDKEY",
+      "TITLE"
+    ],
+    "DFF_8865": [
+      "CODE",
+      "TID"
+    ],
+    "DFVT_8865": [
+      "TID"
+    ],
+    "DF_8865": [
+      "BILLINGKEY",
+      "BPAY_REFERENCE",
+      "BPAY_SEQUENCE",
+      "CASES_EMA_ID",
+      "CASES_KEY",
+      "DFKEY",
+      "HEALTH_SUM_SI_ID",
+      "HOMEKEY",
+      "MAILKEY",
+      "PARENT_A_SI_ID",
+      "PARENT_B_SI_ID"
+    ],
+    "DR_8865": [
+      "BPAY_REFERENCE",
+      "BPAY_SEQUENCE",
+      "BUSNAME",
+      "DRKEY",
+      "MAILNAME",
+      "TITLE"
+    ],
+    "GLBUDG_8865": [
+      "BUDGETKEY",
+      "CODE"
+    ],
+    "GLF_8865": [
+      "CODE",
+      "TID"
+    ],
+    "GL_8865": [
+      "CODE"
+    ],
+    "KCC_8865": [
+      "KCCKEY"
+    ],
+    "KCD_8865": [
+      "KCDKEY"
+    ],
+    "KCM_8865": [
+      "DESCRIPTION",
+      "KCMKEY",
+      "LW_DATE"
+    ],
+    "KCT_8865": [
+      "ABBREV_DESC",
+      "DESCRIPTION",
+      "KCTKEY"
+    ],
+    "KCV_8865": [
+      "VISA_SUBCLASS"
+    ],
+    "KCY_8865": [
+      "KCYKEY"
+    ],
+    "KDI_8865": [
+      "KDIKEY",
+      "KDOKEY"
+    ],
+    "KDO_8865": [
+      "KDOKEY"
+    ],
+    "KGC_8865": [
+      "DESCRIPTION",
+      "KGCKEY"
+    ],
+    "KGH_8865": [
+      "KGHKEY"
+    ],
+    "KGLINIT_8865": [
+      "INITIATIVE",
+      "TITLE"
+    ],
+    "KGLPROG_8865": [
+      "GLPROGRAM",
+      "TITLE"
+    ],
+    "KGLSUB_8865": [
+      "SUBPROGRAM"
+    ],
+    "KGLT_8865": [
+      "GL_TYPE",
+      "TITLE"
+    ],
+    "KGL_8865": [
+      "CASESKEY",
+      "KGLKEY"
+    ],
+    "KGO_8865": [
+      "KGOKEY"
+    ],
+    "KGR_8865": [
+      "RELIGION"
+    ],
+    "KGT_8865": [
+      "COUNTRY"
+    ],
+    "KNATT_8865": [
+      "DESCRIPTION",
+      "KNATTKEY"
+    ],
+    "KSA_8865": [
+      "DESCRIPTION",
+      "KSAKEY"
+    ],
+    "KSC_8865": [
+      "KSCKEY",
+      "SF_POSITION"
+    ],
+    "KSF_8865": [
+      "KSFKEY"
+    ],
+    "SCI_8865": [
+      "ADDRESS02",
+      "ADMIN_SITE",
+      "AGE_CALCULATION_DATE",
+      "CAMPUS_EMAIL_CONTACT",
+      "CAMPUS_NAME",
+      "CAMPUS_OPEN_IND",
+      "CAMPUS_TYPE",
+      "CONSECUTIVE_DAYS",
+      "CUMULATIVE_DAYS",
+      "CURRENT_QUILT",
+      "CURRENT_RELEASE",
+      "CURRENT_SEMESTER",
+      "DELIVERY_ADDRESS01",
+      "DELIVERY_ADDRESS02",
+      "DELIVERY_FAX",
+      "DELIVERY_POSTCODE",
+      "DELIVERY_STATE",
+      "DELIVERY_SUBURB",
+      "DELIVERY_TELEPHONE",
+      "DESTINATION_SCHOOL",
+      "DMIRROR_VERSION",
+      "FAX",
+      "GENDER_DEFAULT",
+      "GLOBAL_ID",
+      "LAST_PROMOTION_DATE",
+      "LW_DATE",
+      "LW_TIME",
+      "LW_USER",
+      "MAILING_ADDRESS02",
+      "MAILING_POSTCODE",
+      "MAILING_STATE",
+      "MAILING_SUBURB",
+      "MAP_NUM",
+      "MAP_TYPE",
+      "MASTER_KEY",
+      "NCCD_STUDENT_SAVED",
+      "NCCD_STUDENT_SAVED_AUG",
+      "NCCD_SUMMARY_SAVED",
+      "NCCD_SUMMARY_SAVED_AUG",
+      "NEXT_ENROLMENT_DATE",
+      "OVERALL_DAYS",
+      "PLATFORM",
+      "POSTCODE",
+      "PREF_MAIL_MECH",
+      "PROFILE_SENT",
+      "PROFILE_UPDATED",
+      "RELEASE_ACTION",
+      "RELEASE_DATE",
+      "REL_INSTR",
+      "SAM_SCH_COUNCIL",
+      "SCHEMA_VERIFIED",
+      "SCHOOL_LINK",
+      "SCHOOL_NAME",
+      "SCHOOL_TYPE",
+      "SCH_BMANAGER",
+      "SCH_COUNCIL_PRES",
+      "SCH_DEFINED01",
+      "SCH_EMERG_CONTACT",
+      "SCH_MASTER_KEY",
+      "SCH_PRINCIPAL",
+      "SCH_VAC_CONTACT",
+      "SCH_VPRIN",
+      "SCIKEY",
+      "SF_2VPRIN",
+      "SF_BMANAGER",
+      "SF_EMERG_CONTACT",
+      "SF_OIC",
+      "SF_PURCH_MANAGER",
+      "SF_VAC_CONTACT",
+      "SF_VPRIN",
+      "SPEC_CURR_IND",
+      "STATE",
+      "SUBURB",
+      "TELEPHONE",
+      "TFR_ENROLMENT_DATE",
+      "UPGRADE_VERSION",
+      "X_AXIS",
+      "Y_AXIS"
+    ],
+    "SCL_8865": [
+      "SCLKEY"
+    ],
+    "SF_8865": [
+      "DEBTOR_ID",
+      "HOMEKEY",
+      "MAILKEY",
+      "SFKEY"
+    ],
+    "SG_8865": [
+      "SGKEY"
+    ],
+    "SKGS_8865": [
+      "SCHOOL",
+      "SCHOOL_ID"
+    ],
+    "SMC_8865": [
+      "HEALTH_INFO_SI_ID",
+      "SMCKEY"
+    ],
+    "SM_8865": [
+      "ROOM"
+    ],
+    "STAR_8865": [
+      "LW_DATE",
+      "RESTRICTION",
+      "SKEY",
+      "TID"
+    ],
+    "STMA_8865": [
+      "CKEY",
+      "MKEY",
+      "SKEY",
+      "TID"
+    ],
+    "STNAT_8865": [
+      "SKEY",
+      "TID"
+    ],
+    "STPO_8865": [
+      "STPOKEY",
+      "TID"
+    ],
+    "STPS_8865": [
+      "SKEY",
+      "TID"
+    ],
+    "STSSB_8865": [
+      "SKEY"
+    ],
+    "STSUP_8865": [
+      "FIRST_NAME",
+      "SKEY",
+      "SURNAME",
+      "TID"
+    ],
+    "STVDI_8865": [
+      "SKEY",
+      "TID"
+    ],
+    "STVDO_8865": [
+      "SKEY",
+      "TID"
+    ],
+    "ST_8865": [
+      "APPLICATION_SI_ID",
+      "CASES_EMA_ID",
+      "CRIS_ID",
+      "DISABILITY_ID",
+      "ENROLMENT_SI_ID",
+      "FIRST_REG_NO",
+      "INTERNATIONAL_ST_ID",
+      "REGISTRATION",
+      "STKEY",
+      "STUDENT_SI_ID",
+      "VCE_ID"
+    ],
+    "SU_8865": [
+      "SUKEY",
+      "VCAA_ID"
+    ],
+    "SXABCONV_8865": [
+      "STKEY",
+      "SXABCONV_ID"
+    ],
+    "SXAB_8865": [
+      "EMAIL_AM_KEY",
+      "EMAIL_PM_KEY",
+      "SMS_AM_KEY",
+      "SMS_PM_KEY",
+      "STKEY",
+      "SXAB_ID"
+    ],
+    "SXAS_8865": [
+      "EMAIL_KEY",
+      "SMS_KEY",
+      "STKEY",
+      "TID",
+      "TXAS_ID"
+    ],
+    "TCAT_8865": [
+      "TCATKEY"
+    ],
+    "TCTB_8865": [
+      "TCTBKEY",
+      "TID"
+    ],
+    "TCTD_8865": [
+      "QKEY",
+      "TCTDKEY",
+      "TID"
+    ],
+    "TCTQ_8865": [
+      "GKEY",
+      "QKEY",
+      "TCTQKEY",
+      "TID"
+    ],
+    "TCTR_8865": [
+      "TCTQ_TID",
+      "TCTRKEY",
+      "TID"
+    ],
+    "TC_8865": [
+      "TCKEY"
+    ],
+    "TE_8865": [
+      "TEKEY"
+    ],
+    "THTN_8865": [
+      "QKEY",
+      "TID"
+    ],
+    "THTQ_8865": [
+      "GKEY",
+      "QKEY",
+      "TID"
+    ],
+    "TH_8865": [
+      "THKEY",
+      "TT01KEY",
+      "TT02KEY",
+      "TT03KEY",
+      "TT04KEY",
+      "TT05KEY",
+      "TT06KEY",
+      "TT07KEY",
+      "TT08KEY",
+      "TT09KEY",
+      "TT10KEY",
+      "TT11KEY",
+      "TT12KEY",
+      "TT13KEY"
+    ],
+    "TTTG_8865": [
+      "GKEY",
+      "TID"
+    ],
+    "TT_8865": [
+      "TITLE",
+      "TTKEY"
+    ],
+    "TXAS_8865": [
+      "TID"
+    ],
+    "UM_8865": [
+      "UMKEY",
+      "UM_TRANS_ID"
+    ]
+  },
+  "relationships": [
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "CODE",
+      "to_table": "DFF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "CODE",
+      "to_table": "GLBUDG_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "CODE",
+      "to_table": "GLF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "CODE",
+      "to_table": "GL_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "SUBPROGRAM",
+      "to_table": "KGLSUB_8865",
+      "to_pk": "SUBPROGRAM"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "GLPROGRAM",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "GLPROGRAM"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "INITIATIVE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "INITIATIVE"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "CRF_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "ADDRESS02"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "STATE",
+      "to_table": "SCI_8865",
+      "to_pk": "STATE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "POSTCODE",
+      "to_table": "SCI_8865",
+      "to_pk": "POSTCODE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "COUNTRY",
+      "to_table": "KGT_8865",
+      "to_pk": "COUNTRY"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "TELEPHONE",
+      "to_table": "SCI_8865",
+      "to_pk": "TELEPHONE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "FAX",
+      "to_table": "SCI_8865",
+      "to_pk": "FAX"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "BPAY_REFERENCE",
+      "to_table": "DF_8865",
+      "to_pk": "BPAY_REFERENCE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "BPAY_REFERENCE",
+      "to_table": "DR_8865",
+      "to_pk": "BPAY_REFERENCE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "SURNAME",
+      "to_table": "STSUP_8865",
+      "to_pk": "SURNAME"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "FIRST_NAME",
+      "to_table": "STSUP_8865",
+      "to_pk": "FIRST_NAME"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "CR_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "CODE",
+      "to_table": "CRF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "CODE",
+      "to_table": "GLBUDG_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "CODE",
+      "to_table": "GLF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "CODE",
+      "to_table": "GL_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "BPAY_REFERENCE",
+      "to_table": "DF_8865",
+      "to_pk": "BPAY_REFERENCE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "BPAY_REFERENCE",
+      "to_table": "DR_8865",
+      "to_pk": "BPAY_REFERENCE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "SUBPROGRAM",
+      "to_table": "KGLSUB_8865",
+      "to_pk": "SUBPROGRAM"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "GLPROGRAM",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "GLPROGRAM"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "INITIATIVE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "INITIATIVE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "DFF_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "DFVT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "HOMEKEY",
+      "to_table": "SF_8865",
+      "to_pk": "HOMEKEY"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "MAILKEY",
+      "to_table": "SF_8865",
+      "to_pk": "MAILKEY"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "BPAY_SEQUENCE",
+      "to_table": "DR_8865",
+      "to_pk": "BPAY_SEQUENCE"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "BPAY_REFERENCE",
+      "to_table": "DR_8865",
+      "to_pk": "BPAY_REFERENCE"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "CASES_EMA_ID",
+      "to_table": "ST_8865",
+      "to_pk": "CASES_EMA_ID"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "DF_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "POSTCODE",
+      "to_table": "SCI_8865",
+      "to_pk": "POSTCODE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "TELEPHONE",
+      "to_table": "SCI_8865",
+      "to_pk": "TELEPHONE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "FAX",
+      "to_table": "SCI_8865",
+      "to_pk": "FAX"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "ADDRESS02"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "BPAY_SEQUENCE",
+      "to_table": "DF_8865",
+      "to_pk": "BPAY_SEQUENCE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "BPAY_REFERENCE",
+      "to_table": "DF_8865",
+      "to_pk": "BPAY_REFERENCE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "DR_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "SUBPROGRAM",
+      "to_table": "KGLSUB_8865",
+      "to_pk": "SUBPROGRAM"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "CODE",
+      "to_table": "CRF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "CODE",
+      "to_table": "DFF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "CODE",
+      "to_table": "GLF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "CODE",
+      "to_table": "GL_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "INITIATIVE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "INITIATIVE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "GLBUDG_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "CODE",
+      "to_table": "CRF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "CODE",
+      "to_table": "DFF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "CODE",
+      "to_table": "GLBUDG_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "CODE",
+      "to_table": "GL_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "ADDRESS02"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "SUBPROGRAM",
+      "to_table": "KGLSUB_8865",
+      "to_pk": "SUBPROGRAM"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "GLPROGRAM",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "GLPROGRAM"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "INITIATIVE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "INITIATIVE"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "GLF_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "CODE",
+      "to_table": "CRF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "CODE",
+      "to_table": "DFF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "CODE",
+      "to_table": "GLBUDG_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "CODE",
+      "to_table": "GLF_8865",
+      "to_pk": "CODE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "GL_TYPE",
+      "to_table": "KGLT_8865",
+      "to_pk": "GL_TYPE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "GL_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KCC_8865",
+      "from_column": "CURRENT_QUILT",
+      "to_table": "SCI_8865",
+      "to_pk": "CURRENT_QUILT"
+    },
+    {
+      "from_table": "KCC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCC_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KCC_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "ADDRESS02"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "SUBURB",
+      "to_table": "SCI_8865",
+      "to_pk": "SUBURB"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "STATE",
+      "to_table": "SCI_8865",
+      "to_pk": "STATE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "POSTCODE",
+      "to_table": "SCI_8865",
+      "to_pk": "POSTCODE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "TELEPHONE",
+      "to_table": "SCI_8865",
+      "to_pk": "TELEPHONE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "FAX",
+      "to_table": "SCI_8865",
+      "to_pk": "FAX"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KCD_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KCM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCM_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCM_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCM_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KCM_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KCT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KCV_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KCY_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "KDOKEY",
+      "to_table": "KDO_8865",
+      "to_pk": "KDOKEY"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KDI_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "KDOKEY",
+      "to_table": "KDI_8865",
+      "to_pk": "KDOKEY"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KDO_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "ROOM",
+      "to_table": "SM_8865",
+      "to_pk": "ROOM"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGC_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGH_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGLINIT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGLPROG_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGLSUB_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGLT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGL_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGO_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGR_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KGT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KNATT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KSA_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KSC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSC_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KSC_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "KSF_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SCI_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SCI_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SCL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SCL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SCL_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SCL_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SCL_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "SURNAME",
+      "to_table": "STSUP_8865",
+      "to_pk": "SURNAME"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "FIRST_NAME",
+      "to_table": "STSUP_8865",
+      "to_pk": "FIRST_NAME"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "HOMEKEY",
+      "to_table": "DF_8865",
+      "to_pk": "HOMEKEY"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "MAILKEY",
+      "to_table": "DF_8865",
+      "to_pk": "MAILKEY"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "ROOM",
+      "to_table": "SM_8865",
+      "to_pk": "ROOM"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "RELIGION",
+      "to_table": "KGR_8865",
+      "to_pk": "RELIGION"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SF_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SG_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "SCHOOL_TYPE",
+      "to_table": "SCI_8865",
+      "to_pk": "SCHOOL_TYPE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "CAMPUS_TYPE",
+      "to_table": "SCI_8865",
+      "to_pk": "CAMPUS_TYPE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "CAMPUS_NAME",
+      "to_table": "SCI_8865",
+      "to_pk": "CAMPUS_NAME"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "ADDRESS02"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "SUBURB",
+      "to_table": "SCI_8865",
+      "to_pk": "SUBURB"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "STATE",
+      "to_table": "SCI_8865",
+      "to_pk": "STATE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "POSTCODE",
+      "to_table": "SCI_8865",
+      "to_pk": "POSTCODE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "TELEPHONE",
+      "to_table": "SCI_8865",
+      "to_pk": "TELEPHONE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "FAX",
+      "to_table": "SCI_8865",
+      "to_pk": "FAX"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "MAILING_ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "MAILING_ADDRESS02"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "MAILING_SUBURB",
+      "to_table": "SCI_8865",
+      "to_pk": "MAILING_SUBURB"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "MAILING_STATE",
+      "to_table": "SCI_8865",
+      "to_pk": "MAILING_STATE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "MAILING_POSTCODE",
+      "to_table": "SCI_8865",
+      "to_pk": "MAILING_POSTCODE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "DELIVERY_ADDRESS01",
+      "to_table": "SCI_8865",
+      "to_pk": "DELIVERY_ADDRESS01"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "DELIVERY_ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "DELIVERY_ADDRESS02"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "DELIVERY_SUBURB",
+      "to_table": "SCI_8865",
+      "to_pk": "DELIVERY_SUBURB"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "DELIVERY_STATE",
+      "to_table": "SCI_8865",
+      "to_pk": "DELIVERY_STATE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "DELIVERY_POSTCODE",
+      "to_table": "SCI_8865",
+      "to_pk": "DELIVERY_POSTCODE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "DELIVERY_TELEPHONE",
+      "to_table": "SCI_8865",
+      "to_pk": "DELIVERY_TELEPHONE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "DELIVERY_FAX",
+      "to_table": "SCI_8865",
+      "to_pk": "DELIVERY_FAX"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "MAP_TYPE",
+      "to_table": "SCI_8865",
+      "to_pk": "MAP_TYPE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "MAP_NUM",
+      "to_table": "SCI_8865",
+      "to_pk": "MAP_NUM"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "X_AXIS",
+      "to_table": "SCI_8865",
+      "to_pk": "X_AXIS"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "Y_AXIS",
+      "to_table": "SCI_8865",
+      "to_pk": "Y_AXIS"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "SURNAME",
+      "to_table": "STSUP_8865",
+      "to_pk": "SURNAME"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "FIRST_NAME",
+      "to_table": "STSUP_8865",
+      "to_pk": "FIRST_NAME"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SKGS_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SMC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SMC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SMC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SMC_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SMC_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SM_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "SKEY",
+      "to_table": "STMA_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "SKEY",
+      "to_table": "STNAT_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "SKEY",
+      "to_table": "STPS_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "SKEY",
+      "to_table": "STSSB_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "SKEY",
+      "to_table": "STSUP_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDI_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDO_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "STAR_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "SKEY",
+      "to_table": "STAR_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "SKEY",
+      "to_table": "STNAT_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "SKEY",
+      "to_table": "STPS_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "SKEY",
+      "to_table": "STSSB_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "SKEY",
+      "to_table": "STSUP_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDI_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDO_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "STMA_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "SKEY",
+      "to_table": "STAR_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "SKEY",
+      "to_table": "STMA_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "SKEY",
+      "to_table": "STPS_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "SKEY",
+      "to_table": "STSSB_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "SKEY",
+      "to_table": "STSUP_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDI_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDO_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCM_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KCT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KGC_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KNATT_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "DESCRIPTION",
+      "to_table": "KSA_8865",
+      "to_pk": "DESCRIPTION"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "STNAT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "STPO_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "SKEY",
+      "to_table": "STAR_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "SKEY",
+      "to_table": "STMA_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "SKEY",
+      "to_table": "STNAT_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "SKEY",
+      "to_table": "STSSB_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "SKEY",
+      "to_table": "STSUP_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDI_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDO_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "SCHOOL",
+      "to_table": "SKGS_8865",
+      "to_pk": "SCHOOL"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "STPS_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "STSSB_8865",
+      "from_column": "SKEY",
+      "to_table": "STAR_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSSB_8865",
+      "from_column": "SKEY",
+      "to_table": "STMA_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSSB_8865",
+      "from_column": "SKEY",
+      "to_table": "STNAT_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSSB_8865",
+      "from_column": "SKEY",
+      "to_table": "STPS_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSSB_8865",
+      "from_column": "SKEY",
+      "to_table": "STSUP_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSSB_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDI_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSSB_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDO_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "SKEY",
+      "to_table": "STAR_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "SKEY",
+      "to_table": "STMA_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "SKEY",
+      "to_table": "STNAT_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "SKEY",
+      "to_table": "STPS_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "SKEY",
+      "to_table": "STSSB_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDI_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDO_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "ADDRESS02"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "SUBURB",
+      "to_table": "SCI_8865",
+      "to_pk": "SUBURB"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "STATE",
+      "to_table": "SCI_8865",
+      "to_pk": "STATE"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "POSTCODE",
+      "to_table": "SCI_8865",
+      "to_pk": "POSTCODE"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "STSUP_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "SKEY",
+      "to_table": "STAR_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "SKEY",
+      "to_table": "STMA_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "SKEY",
+      "to_table": "STNAT_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "SKEY",
+      "to_table": "STPS_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "SKEY",
+      "to_table": "STSSB_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "SKEY",
+      "to_table": "STSUP_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDO_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "STVDI_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "SKEY",
+      "to_table": "STAR_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "SKEY",
+      "to_table": "STMA_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "SKEY",
+      "to_table": "STNAT_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "SKEY",
+      "to_table": "STPS_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "SKEY",
+      "to_table": "STSSB_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "SKEY",
+      "to_table": "STSUP_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "SKEY",
+      "to_table": "STVDI_8865",
+      "to_pk": "SKEY"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "STVDO_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "STKEY",
+      "to_table": "SXABCONV_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "STKEY",
+      "to_table": "SXAB_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "STKEY",
+      "to_table": "SXAS_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "SURNAME",
+      "to_table": "STSUP_8865",
+      "to_pk": "SURNAME"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "FIRST_NAME",
+      "to_table": "STSUP_8865",
+      "to_pk": "FIRST_NAME"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "MAP_TYPE",
+      "to_table": "SCI_8865",
+      "to_pk": "MAP_TYPE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "MAP_NUM",
+      "to_table": "SCI_8865",
+      "to_pk": "MAP_NUM"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "X_AXIS",
+      "to_table": "SCI_8865",
+      "to_pk": "X_AXIS"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "Y_AXIS",
+      "to_table": "SCI_8865",
+      "to_pk": "Y_AXIS"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "CASES_EMA_ID",
+      "to_table": "DF_8865",
+      "to_pk": "CASES_EMA_ID"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "RELIGION",
+      "to_table": "KGR_8865",
+      "to_pk": "RELIGION"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "REL_INSTR",
+      "to_table": "SCI_8865",
+      "to_pk": "REL_INSTR"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "VISA_SUBCLASS",
+      "to_table": "KCV_8865",
+      "to_pk": "VISA_SUBCLASS"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "SCH_DEFINED01",
+      "to_table": "SCI_8865",
+      "to_pk": "SCH_DEFINED01"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "ST_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SU_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SU_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SU_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SU_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SU_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SXABCONV_8865",
+      "from_column": "STKEY",
+      "to_table": "ST_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXABCONV_8865",
+      "from_column": "STKEY",
+      "to_table": "SXAB_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXABCONV_8865",
+      "from_column": "STKEY",
+      "to_table": "SXAS_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXABCONV_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXABCONV_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXABCONV_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXABCONV_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SXAB_8865",
+      "from_column": "STKEY",
+      "to_table": "ST_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXAB_8865",
+      "from_column": "STKEY",
+      "to_table": "SXABCONV_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXAB_8865",
+      "from_column": "STKEY",
+      "to_table": "SXAS_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXAB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXAB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXAB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXAB_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SXAB_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "STKEY",
+      "to_table": "ST_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "STKEY",
+      "to_table": "SXABCONV_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "STKEY",
+      "to_table": "SXAB_8865",
+      "to_pk": "STKEY"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "SXAS_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TCAT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "ROOM",
+      "to_table": "SM_8865",
+      "to_pk": "ROOM"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TCTB_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "QKEY",
+      "to_table": "TCTQ_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "QKEY",
+      "to_table": "THTN_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "QKEY",
+      "to_table": "THTQ_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TCTD_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "QKEY",
+      "to_table": "TCTD_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "QKEY",
+      "to_table": "THTN_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "QKEY",
+      "to_table": "THTQ_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "GKEY",
+      "to_table": "THTQ_8865",
+      "to_pk": "GKEY"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "GKEY",
+      "to_table": "TTTG_8865",
+      "to_pk": "GKEY"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TCTQ_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "ROOM",
+      "to_table": "SM_8865",
+      "to_pk": "ROOM"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TCTR_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TC_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TE_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "QKEY",
+      "to_table": "TCTD_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "QKEY",
+      "to_table": "TCTQ_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "QKEY",
+      "to_table": "THTQ_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "THTN_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "QKEY",
+      "to_table": "TCTD_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "QKEY",
+      "to_table": "TCTQ_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "QKEY",
+      "to_table": "THTN_8865",
+      "to_pk": "QKEY"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "GKEY",
+      "to_table": "TCTQ_8865",
+      "to_pk": "GKEY"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "GKEY",
+      "to_table": "TTTG_8865",
+      "to_pk": "GKEY"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "THTQ_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "TITLE",
+      "to_table": "TT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TH_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "TID",
+      "to_table": "TXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "GKEY",
+      "to_table": "TCTQ_8865",
+      "to_pk": "GKEY"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "GKEY",
+      "to_table": "THTQ_8865",
+      "to_pk": "GKEY"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TTTG_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "TITLE",
+      "to_table": "CR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "TITLE",
+      "to_table": "DR_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLINIT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLPROG_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "TITLE",
+      "to_table": "KGLT_8865",
+      "to_pk": "TITLE"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TT_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "CRF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "DFF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "DFVT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "GLF_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "STAR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "STMA_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "STNAT_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "STPO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "STPS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "STSUP_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "STVDI_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "STVDO_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "SXAS_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "TCTB_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "TCTD_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "TCTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "TCTR_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "THTN_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "THTQ_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "TID",
+      "to_table": "TTTG_8865",
+      "to_pk": "TID"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "TXAS_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "ADDRESS02",
+      "to_table": "SCI_8865",
+      "to_pk": "ADDRESS02"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "STATE",
+      "to_table": "SCI_8865",
+      "to_pk": "STATE"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "POSTCODE",
+      "to_table": "SCI_8865",
+      "to_pk": "POSTCODE"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "TELEPHONE",
+      "to_table": "SCI_8865",
+      "to_pk": "TELEPHONE"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "FAX",
+      "to_table": "SCI_8865",
+      "to_pk": "FAX"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "COUNTRY",
+      "to_table": "KGT_8865",
+      "to_pk": "COUNTRY"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "LW_DATE",
+      "to_table": "KCM_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "LW_DATE",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "LW_DATE",
+      "to_table": "STAR_8865",
+      "to_pk": "LW_DATE"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "LW_TIME",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_TIME"
+    },
+    {
+      "from_table": "UM_8865",
+      "from_column": "LW_USER",
+      "to_table": "SCI_8865",
+      "to_pk": "LW_USER"
+    }
+  ]
+}

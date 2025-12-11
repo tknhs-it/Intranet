@@ -54,7 +54,7 @@ export async function runEtl(): Promise<{
     // Process STUDENTS
     if (files['STUDENT.DAT']) {
       try {
-        const rawStudents = parseStudents(files['STUDENT.DAT']);
+        const rawStudents = await parseStudents(files['STUDENT.DAT']);
         logger.info({ count: rawStudents.length }, 'Parsed students');
 
         const { valid, invalid } = validateBatch(rawStudents, validateStudent);
@@ -77,7 +77,7 @@ export async function runEtl(): Promise<{
     // Process STAFF
     if (files['STAFF.DAT']) {
       try {
-        const rawStaff = parseStaff(files['STAFF.DAT']);
+        const rawStaff = await parseStaff(files['STAFF.DAT']);
         logger.info({ count: rawStaff.length }, 'Parsed staff');
 
         const { valid, invalid } = validateBatch(rawStaff, validateStaff);

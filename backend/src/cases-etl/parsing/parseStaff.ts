@@ -1,4 +1,6 @@
 import { parseFixedWidth } from '../util/fixedWidth';
+import { getFileSchema } from '../config/schemaConfig';
+import { logger } from '../util/logger';
 
 export interface RawStaffRecord {
   staffId: string;
@@ -15,20 +17,36 @@ export interface RawStaffRecord {
 /**
  * Parse STAFF.DAT file
  * Format: Fixed-width columns
+ * Schema is loaded from relationships.json or schemaConfig.ts
  */
-export function parseStaff(raw: string): RawStaffRecord[] {
-  const columns = [
-    { name: 'staffId', start: 0, width: 10 },
-    { name: 'surname', start: 10, width: 30 },
-    { name: 'givenNames', start: 40, width: 30 },
-    { name: 'email', start: 70, width: 100 },
-    { name: 'employmentType', start: 170, width: 2 },
-    { name: 'activeFlag', start: 172, width: 1 }, // Y/N
-    { name: 'department', start: 173, width: 50 },
-    { name: 'position', start: 223, width: 50 },
-    { name: 'phone', start: 273, width: 20 },
-  ];
+export async function parseStaff(raw: string): Promise<RawStaffRecord[]> {
+  // Load schema from relationships.json or fallback
+  const schema = await getFileSchema('STAFF.DAT');
+  
+  if (!schema) {
+    throw new Error('No schema found for STAFF.DAT');
+  }
 
-  return parseFixedWidth(raw, columns);
+  // Parse using schema columns
+  const rawRecords = parseFixedWidth(raw, schema.columns);
+
+  // Map fields using field_mapping if available
+  const fieldMapping = schema.field_mapping || {};
+  
+  return rawRecords.map(record => {
+    const mapped: any = {};
+    
+    // Apply field mapping
+    for (const [jsonField, ourField] of Object.entries(fieldMapping)) {
+      mapped[ourField] = record[jsonField]?.trim() || record[ourField]?.trim();
+    }
+    
+    // If no mapping, use original field names
+    if (Object.keys(mapped).length === 0) {
+      Object.assign(mapped, record);
+    }
+
+    return mapped as RawStaffRecord;
+  });
 }
 
