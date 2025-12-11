@@ -14,8 +14,8 @@ The project is divided into 9 sprints covering V1 (must-haves), V2 (high-value),
 
 | Sprint | Duration | Focus | Status |
 |--------|----------|-------|--------|
-| Sprint 1 | 2 weeks | Infrastructure & Auth | 📋 Planned |
-| Sprint 2 | 2 weeks | Dashboard | 📋 Planned |
+| Sprint 1 | 2 weeks | Infrastructure & Auth | 🟡 In Progress (60%) |
+| Sprint 2 | 2 weeks | Dashboard | 🟡 In Progress (50%) |
 | Sprint 3 | 1.5 weeks | Staff Directory | 📋 Planned |
 | Sprint 4 | 1.5 weeks | Polish & Testing | 📋 Planned |
 
@@ -42,22 +42,51 @@ The project is divided into 9 sprints covering V1 (must-haves), V2 (high-value),
 
 ### Sprint 1: V1 Foundation
 **Issues**: See `.github/ISSUE_TEMPLATE/sprint-1-v1-foundation.md`
+**Status**: 🟡 In Progress (60% Complete)
 
-- Environment setup
-- Authentication
-- Database setup
-- CASES ETL testing
-- Compass integration testing
+**Completed:**
+- ✅ CASES ETL production-ready (error recovery, notifications, monitoring)
+- ✅ Schema loader from relationships.json
+- ✅ Database schema defined
+- ✅ Authentication middleware structure
+- ✅ Teacher login flow documented
+- ✅ Error handling and health checks
+
+**In Progress:**
+- ⚠️ Azure AD app registrations (needs setup)
+- ⚠️ CASES ETL testing with real files
+- ⚠️ Compass integration testing
+- ⚠️ Graph API permissions
+
+**Remaining:**
+- Database migrations
+- End-to-end authentication testing
+- Compass API testing
+- Graph API testing
 
 ### Sprint 2: V1 Dashboard
 **Issues**: See `.github/ISSUE_TEMPLATE/sprint-2-v1-dashboard.md`
+**Status**: 🟡 In Progress (50% Complete)
 
-- Homepage layout
-- Daily Org PDF
-- Timetable display
-- Staff absences
-- Extras/coverage
-- Room changes
+**Completed:**
+- ✅ Homepage layout implemented (matches wireframe)
+- ✅ Dashboard merged API route
+- ✅ Data merge service structure
+- ✅ Frontend authentication flow
+- ✅ Timetable display structure
+- ✅ Teacher login flow documented
+
+**In Progress:**
+- ⚠️ Daily Org PDF integration (SharePoint)
+- ⚠️ Compass timetable data integration
+- ⚠️ Graph API photo retrieval
+- ⚠️ Staff absences from Compass
+
+**Remaining:**
+- End-to-end data flow testing
+- Real Compass data integration
+- Graph API photo display
+- Staff absences display
 
 ### Sprint 3: V1 Staff Directory
 **Issues**: See `.github/ISSUE_TEMPLATE/sprint-3-v1-staff-directory.md`
