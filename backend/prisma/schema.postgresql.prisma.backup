@@ -1,5 +1,5 @@
-// SQL Server compatible Prisma schema
-// SQL Server doesn't support native Json or Enums, so we use String types
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client-js"
@@ -17,7 +17,7 @@ model User {
   email         String   @unique
   firstName     String
   lastName      String
-  role          String   // UserRole enum as string: TEACHER, ADMIN, LEADERSHIP, etc.
+  role          UserRole
   department    String?
   position      String?
   createdAt     DateTime @default(now())
@@ -30,11 +30,19 @@ model User {
   roomBookings  RoomBooking[]
   pdRecords     PDRecord[]
   tasks         Task[]
-  dashboard     Dashboard?
 
   @@index([email])
   @@index([casesId])
-  @@index([role])
+}
+
+enum UserRole {
+  TEACHER
+  ADMIN
+  LEADERSHIP
+  MAINTENANCE
+  ICT
+  LIBRARIAN
+  COUNSELLOR
 }
 
 // Student model - synced from CASES
@@ -64,7 +72,7 @@ model Dashboard {
   id        String   @id @default(cuid())
   userId    String   @unique
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  widgets   String   @default("{}") @db.NVarChar(Max) // JSON stored as string
+  widgets   Json     // Customizable widget configuration
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -77,8 +85,8 @@ model Room {
   building    String
   floor       Int?
   capacity    Int?
-  type        String   // RoomType as string: CLASSROOM, LAB, LIBRARY, etc.
-  equipment   String   @default("[]") @db.NVarChar(Max) // JSON array stored as string
+  type        RoomType
+  equipment   String[] // Array of equipment tags
   compassRoomId String? // Link to Compass room ID
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -88,7 +96,16 @@ model Room {
 
   @@index([code])
   @@index([building])
-  @@index([type])
+}
+
+enum RoomType {
+  CLASSROOM
+  LAB
+  LIBRARY
+  HALL
+  OFFICE
+  MEETING_ROOM
+  SPECIALIST
 }
 
 model RoomBooking {
@@ -128,11 +145,11 @@ model RoomTimetable {
 model Announcement {
   id          String   @id @default(cuid())
   title       String
-  content     String   @db.NVarChar(Max)
+  content     String   @db.Text
   authorId    String
   author      User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  tags        String   @default("[]") @db.NVarChar(Max) // JSON array stored as string
-  priority    String   @default("NORMAL") // Priority as string: LOW, NORMAL, HIGH, URGENT
+  tags        String[] // e.g., ["ICT", "leadership", "admin"]
+  priority    Priority @default(NORMAL)
   isPinned    Boolean  @default(false)
   expiresAt   DateTime?
   createdAt   DateTime @default(now())
@@ -141,7 +158,14 @@ model Announcement {
   comments    AnnouncementComment[]
 
   @@index([isPinned, createdAt])
-  @@index([priority])
+  @@index([tags])
+}
+
+enum Priority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
 }
 
 model AnnouncementComment {
@@ -149,7 +173,7 @@ model AnnouncementComment {
   announcementId String
   announcement   Announcement @relation(fields: [announcementId], references: [id], onDelete: Cascade)
   authorId       String
-  content        String      @db.NVarChar(Max)
+  content        String      @db.Text
   createdAt      DateTime    @default(now())
   updatedAt      DateTime    @updatedAt
 }
@@ -160,14 +184,14 @@ model HelpdeskTicket {
   ticketNumber String  @unique @default(uuid())
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  type        String   // TicketType as string: ICT, MAINTENANCE
+  type        TicketType
   category    String   // e.g., "Hardware", "Software", "Network", "Plumbing", "Electrical"
   title       String
-  description String   @db.NVarChar(Max)
-  status      String   @default("OPEN") // TicketStatus as string: OPEN, IN_PROGRESS, etc.
-  priority    String   @default("NORMAL") // Priority as string
+  description String   @db.Text
+  status      TicketStatus @default(OPEN)
+  priority    Priority @default(NORMAL)
   location    String?  // Room code or location
-  photos      String   @default("[]") @db.NVarChar(Max) // JSON array stored as string
+  photos      String[] // URLs to uploaded photos
   assignedTo  String?  // User ID of assignee
   resolvedAt  DateTime?
   createdAt   DateTime @default(now())
@@ -180,13 +204,26 @@ model HelpdeskTicket {
   @@index([userId])
 }
 
+enum TicketType {
+  ICT
+  MAINTENANCE
+}
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+  CANCELLED
+}
+
 model TicketUpdate {
   id          String        @id @default(cuid())
   ticketId    String
   ticket      HelpdeskTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
   userId      String
-  content     String        @db.NVarChar(Max)
-  status      String?       // TicketStatus as string (nullable)
+  content     String        @db.Text
+  status      TicketStatus?
   createdAt   DateTime      @default(now())
 }
 
@@ -194,10 +231,10 @@ model TicketUpdate {
 model Resource {
   id          String   @id @default(cuid())
   title       String
-  description String?  @db.NVarChar(Max)
-  type        String   // ResourceType as string: LESSON_PLAN, ASSESSMENT, etc.
+  description String?  @db.Text
+  type        ResourceType
   category    String   // e.g., "VCE", "Year 7", "Maths", "Science"
-  tags        String   @default("[]") @db.NVarChar(Max) // JSON array stored as string
+  tags        String[]
   fileUrl     String?  // URL to file storage
   externalUrl String?  // Link to external resource
   authorId    String
@@ -207,16 +244,29 @@ model Resource {
   updatedAt   DateTime @updatedAt
 
   @@index([type, category])
+  @@index([tags])
+}
+
+enum ResourceType {
+  LESSON_PLAN
+  ASSESSMENT
+  RUBRIC
+  CURRICULUM_MAP
+  SAC
+  EXAM
+  UNIT_PLAN
+  EXCURSION
+  TEMPLATE
 }
 
 // Digital Forms
 model Form {
   id          String   @id @default(cuid())
   name        String
-  description String?  @db.NVarChar(Max)
+  description String?  @db.Text
   category    String   // e.g., "Excursion", "PD", "Incident"
-  schema      String   @db.NVarChar(Max) // JSON stored as string
-  workflow    String?  @db.NVarChar(Max) // JSON stored as string (nullable)
+  schema      Json     // Form field definitions
+  workflow    Json?    // Approval workflow configuration
   isActive    Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -232,15 +282,22 @@ model FormSubmission {
   form        Form     @relation(fields: [formId], references: [id], onDelete: Cascade)
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  data        String   @db.NVarChar(Max) // JSON stored as string
-  status      String   @default("PENDING") // SubmissionStatus as string
+  data        Json     // Form submission data
+  status      SubmissionStatus @default(PENDING)
   currentStep Int      @default(0)
-  approvers   String?  @db.NVarChar(Max) // JSON stored as string (nullable)
+  approvers   Json?    // Approval chain
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@index([formId, status])
   @@index([userId])
+}
+
+enum SubmissionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED
 }
 
 // Professional Development
@@ -249,17 +306,23 @@ model PDRecord {
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   title       String
-  description String?  @db.NVarChar(Max)
+  description String?  @db.Text
   provider    String?
   hours       Float
   date        DateTime
   category    String?  // e.g., "VIT", "Curriculum", "Wellbeing"
   evidenceUrl String?  // Link to certificate/evidence
-  status      String   @default("PENDING") // PDStatus as string
+  status      PDStatus @default(PENDING)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@index([userId, date])
+}
+
+enum PDStatus {
+  PENDING
+  APPROVED
+  REJECTED
 }
 
 // Tasks (from Compass + O365)
@@ -268,16 +331,22 @@ model Task {
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   title       String
-  description String?  @db.NVarChar(Max)
-  source      String   // TaskSource as string: COMPASS, O365, INTRANET
+  description String?  @db.Text
+  source      TaskSource
   sourceId    String?  // External ID from Compass/O365
   dueDate     DateTime?
   completed   Boolean  @default(false)
-  priority    String   @default("NORMAL") // Priority as string
+  priority    Priority @default(NORMAL)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@index([userId, completed, dueDate])
+}
+
+enum TaskSource {
+  COMPASS
+  O365
+  INTRANET
 }
 
 // Analytics & Reporting
@@ -285,9 +354,10 @@ model AnalyticsEvent {
   id          String   @id @default(cuid())
   userId      String?
   eventType   String   // e.g., "page_view", "resource_download", "form_submit"
-  eventData   String?  @db.NVarChar(Max) // JSON stored as string (nullable)
+  eventData   Json?
   timestamp   DateTime @default(now())
 
   @@index([eventType, timestamp])
   @@index([userId, timestamp])
 }
+

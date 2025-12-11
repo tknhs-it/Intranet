@@ -1,5 +1,5 @@
-// SQL Server version of Prisma schema
-// Copy this to schema.prisma if using SQL Server
+// SQL Server compatible Prisma schema
+// SQL Server doesn't support native Json or Enums, so we use String types
 
 generator client {
   provider = "prisma-client-js"
@@ -17,7 +17,7 @@ model User {
   email         String   @unique
   firstName     String
   lastName      String
-  role          UserRole
+  role          String   // UserRole enum as string: TEACHER, ADMIN, LEADERSHIP, etc.
   department    String?
   position      String?
   createdAt     DateTime @default(now())
@@ -30,19 +30,11 @@ model User {
   roomBookings  RoomBooking[]
   pdRecords     PDRecord[]
   tasks         Task[]
+  dashboard     Dashboard?
 
   @@index([email])
   @@index([casesId])
-}
-
-enum UserRole {
-  TEACHER
-  ADMIN
-  LEADERSHIP
-  MAINTENANCE
-  ICT
-  LIBRARIAN
-  COUNSELLOR
+  @@index([role])
 }
 
 // Student model - synced from CASES
@@ -72,7 +64,7 @@ model Dashboard {
   id        String   @id @default(cuid())
   userId    String   @unique
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  widgets   Json     // Customizable widget configuration
+  widgets   String   @default("{}") @db.NVarChar(Max) // JSON stored as string
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -85,8 +77,8 @@ model Room {
   building    String
   floor       Int?
   capacity    Int?
-  type        RoomType
-  equipment   String   @default("[]") // JSON array stored as string in SQL Server
+  type        String   // RoomType as string: CLASSROOM, LAB, LIBRARY, etc.
+  equipment   String   @default("[]") @db.NVarChar(Max) // JSON array stored as string
   compassRoomId String? // Link to Compass room ID
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -96,16 +88,7 @@ model Room {
 
   @@index([code])
   @@index([building])
-}
-
-enum RoomType {
-  CLASSROOM
-  LAB
-  LIBRARY
-  HALL
-  OFFICE
-  MEETING_ROOM
-  SPECIALIST
+  @@index([type])
 }
 
 model RoomBooking {
@@ -148,8 +131,8 @@ model Announcement {
   content     String   @db.NVarChar(Max)
   authorId    String
   author      User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  tags        String   @default("[]") // JSON array stored as string
-  priority    Priority @default(NORMAL)
+  tags        String   @default("[]") @db.NVarChar(Max) // JSON array stored as string
+  priority    String   @default("NORMAL") // Priority as string: LOW, NORMAL, HIGH, URGENT
   isPinned    Boolean  @default(false)
   expiresAt   DateTime?
   createdAt   DateTime @default(now())
@@ -158,13 +141,7 @@ model Announcement {
   comments    AnnouncementComment[]
 
   @@index([isPinned, createdAt])
-}
-
-enum Priority {
-  LOW
-  NORMAL
-  HIGH
-  URGENT
+  @@index([priority])
 }
 
 model AnnouncementComment {
@@ -183,14 +160,14 @@ model HelpdeskTicket {
   ticketNumber String  @unique @default(uuid())
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  type        TicketType
+  type        String   // TicketType as string: ICT, MAINTENANCE
   category    String   // e.g., "Hardware", "Software", "Network", "Plumbing", "Electrical"
   title       String
   description String   @db.NVarChar(Max)
-  status      TicketStatus @default(OPEN)
-  priority    Priority @default(NORMAL)
+  status      String   @default("OPEN") // TicketStatus as string: OPEN, IN_PROGRESS, etc.
+  priority    String   @default("NORMAL") // Priority as string
   location    String?  // Room code or location
-  photos      String   @default("[]") // JSON array stored as string
+  photos      String   @default("[]") @db.NVarChar(Max) // JSON array stored as string
   assignedTo  String?  // User ID of assignee
   resolvedAt  DateTime?
   createdAt   DateTime @default(now())
@@ -203,26 +180,13 @@ model HelpdeskTicket {
   @@index([userId])
 }
 
-enum TicketType {
-  ICT
-  MAINTENANCE
-}
-
-enum TicketStatus {
-  OPEN
-  IN_PROGRESS
-  RESOLVED
-  CLOSED
-  CANCELLED
-}
-
 model TicketUpdate {
   id          String        @id @default(cuid())
   ticketId    String
   ticket      HelpdeskTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
   userId      String
   content     String        @db.NVarChar(Max)
-  status      TicketStatus?
+  status      String?       // TicketStatus as string (nullable)
   createdAt   DateTime      @default(now())
 }
 
@@ -231,9 +195,9 @@ model Resource {
   id          String   @id @default(cuid())
   title       String
   description String?  @db.NVarChar(Max)
-  type        ResourceType
+  type        String   // ResourceType as string: LESSON_PLAN, ASSESSMENT, etc.
   category    String   // e.g., "VCE", "Year 7", "Maths", "Science"
-  tags        String   @default("[]") // JSON array stored as string
+  tags        String   @default("[]") @db.NVarChar(Max) // JSON array stored as string
   fileUrl     String?  // URL to file storage
   externalUrl String?  // Link to external resource
   authorId    String
@@ -245,26 +209,14 @@ model Resource {
   @@index([type, category])
 }
 
-enum ResourceType {
-  LESSON_PLAN
-  ASSESSMENT
-  RUBRIC
-  CURRICULUM_MAP
-  SAC
-  EXAM
-  UNIT_PLAN
-  EXCURSION
-  TEMPLATE
-}
-
 // Digital Forms
 model Form {
   id          String   @id @default(cuid())
   name        String
   description String?  @db.NVarChar(Max)
   category    String   // e.g., "Excursion", "PD", "Incident"
-  schema      Json     // Form field definitions
-  workflow    Json?    // Approval workflow configuration
+  schema      String   @db.NVarChar(Max) // JSON stored as string
+  workflow    String?  @db.NVarChar(Max) // JSON stored as string (nullable)
   isActive    Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -280,22 +232,15 @@ model FormSubmission {
   form        Form     @relation(fields: [formId], references: [id], onDelete: Cascade)
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  data        Json     // Form submission data
-  status      SubmissionStatus @default(PENDING)
+  data        String   @db.NVarChar(Max) // JSON stored as string
+  status      String   @default("PENDING") // SubmissionStatus as string
   currentStep Int      @default(0)
-  approvers   Json?    // Approval chain
+  approvers   String?  @db.NVarChar(Max) // JSON stored as string (nullable)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@index([formId, status])
   @@index([userId])
-}
-
-enum SubmissionStatus {
-  PENDING
-  APPROVED
-  REJECTED
-  CANCELLED
 }
 
 // Professional Development
@@ -310,17 +255,11 @@ model PDRecord {
   date        DateTime
   category    String?  // e.g., "VIT", "Curriculum", "Wellbeing"
   evidenceUrl String?  // Link to certificate/evidence
-  status      PDStatus @default(PENDING)
+  status      String   @default("PENDING") // PDStatus as string
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@index([userId, date])
-}
-
-enum PDStatus {
-  PENDING
-  APPROVED
-  REJECTED
 }
 
 // Tasks (from Compass + O365)
@@ -330,21 +269,15 @@ model Task {
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   title       String
   description String?  @db.NVarChar(Max)
-  source      TaskSource
+  source      String   // TaskSource as string: COMPASS, O365, INTRANET
   sourceId    String?  // External ID from Compass/O365
   dueDate     DateTime?
   completed   Boolean  @default(false)
-  priority    Priority @default(NORMAL)
+  priority    String   @default("NORMAL") // Priority as string
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
   @@index([userId, completed, dueDate])
-}
-
-enum TaskSource {
-  COMPASS
-  O365
-  INTRANET
 }
 
 // Analytics & Reporting
@@ -352,10 +285,9 @@ model AnalyticsEvent {
   id          String   @id @default(cuid())
   userId      String?
   eventType   String   // e.g., "page_view", "resource_download", "form_submit"
-  eventData   Json?
+  eventData   String?  @db.NVarChar(Max) // JSON stored as string (nullable)
   timestamp   DateTime @default(now())
 
   @@index([eventType, timestamp])
   @@index([userId, timestamp])
 }
-

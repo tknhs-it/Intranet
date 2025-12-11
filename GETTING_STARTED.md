@@ -47,34 +47,30 @@ psql --version  # Should be 14+
 
 ### Step 2: Set Up Database (10 minutes)
 
+**✅ SQL Server is already configured!**
+
+The project is set up to use SQL Server on `nhssql` server.
+
+**Verify Connection:**
 ```bash
 cd backend
 
-# Create .env file
-cp .env.example .env
-
-# Edit .env and add your database URL
-# DATABASE_URL="postgresql://user:password@localhost:5432/nossal_intranet"
+# Test SQL Server connection
+node test-sqlserver-connection.js
 ```
 
-**Create Database:**
-```bash
-# Connect to PostgreSQL
-psql -U postgres
-
-# Create database
-CREATE DATABASE nossal_intranet;
-
-# Exit psql
-\q
-```
+**If connection fails:**
+- Check SQL Server is running and accessible
+- Verify hostname "nhssql" resolves correctly
+- Check port 1433 is open
+- Verify firewall rules allow connection
 
 **Run Migrations:**
 ```bash
-# Generate Prisma client
+# Generate Prisma client for SQL Server
 npm run prisma:generate
 
-# Run migrations
+# Run migrations (creates all tables)
 npm run prisma:migrate
 
 # Seed database (optional - creates sample data)
@@ -83,9 +79,15 @@ npm run prisma:seed
 
 **Verify:**
 ```bash
-# Check tables were created
-psql -U postgres -d nossal_intranet -c "\dt"
-# Should show: User, Student, Room, Announcement, etc.
+# Test connection again
+node test-sqlserver-connection.js
+# Should show all created tables
+```
+
+**Note:** The database name is `nossal_intranet`. If it doesn't exist, you may need to create it first:
+```sql
+-- Connect to SQL Server and run:
+CREATE DATABASE nossal_intranet;
 ```
 
 ---
