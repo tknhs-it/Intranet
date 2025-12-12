@@ -12,10 +12,13 @@ const api = axios.create({
 // Request interceptor for auth tokens
 api.interceptors.request.use(
   (config) => {
-    // TODO: Add auth token from localStorage/session
-    const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+    // Don't override Authorization header if it's already set
+    // The token should be passed explicitly in the request config
+    if (!config.headers.Authorization) {
+      const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
     }
     return config;
   },
