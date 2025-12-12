@@ -16,8 +16,8 @@ if [ -f .env ]; then
   # Remove old DATABASE_URL line
   sed -i '/^DATABASE_URL=sqlserver:\/\/.*$/d' .env
   
-  # Add new DATABASE_URL at the top
-  sed -i "1i# Database - SQL Server\nDATABASE_URL=sqlserver://${HOSTNAME}:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true" .env
+  # Add new DATABASE_URL at the top (with domain username)
+  sed -i "1i# Database - SQL Server\nDATABASE_URL=sqlserver://${HOSTNAME}:1433;database=nossal_intranet;user=curric%5Cnhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true" .env
   
   echo "✅ Updated .env with hostname: $HOSTNAME"
   echo ""
