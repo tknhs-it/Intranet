@@ -41,11 +41,13 @@ router.get('/merged', async (req: AuthenticatedRequest, res) => {
       
       // If not found, try case-insensitive match using raw query (SQL Server compatible)
       if (!staff) {
+        // SQL Server uses square brackets for identifiers, and Prisma maps model names to table names
+        // The table name in SQL Server is typically the model name (User)
         const result = await prisma.$queryRaw<Array<{ id: string }>>`
-          SELECT id FROM "User" 
+          SELECT id FROM [User] 
           WHERE LOWER(email) = LOWER(${userEmail})
         `;
-        if (result.length > 0) {
+        if (result && result.length > 0) {
           staff = await prisma.user.findUnique({
             where: { id: result[0].id },
           });
