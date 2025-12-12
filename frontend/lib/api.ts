@@ -29,9 +29,11 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      // Handle unauthorized - redirect to login
+      // Handle unauthorized - clear token and let MSAL handle re-authentication
       if (typeof window !== 'undefined') {
-        window.location.href = '/login';
+        localStorage.removeItem('token');
+        // Don't redirect - MSAL will handle authentication via the AuthProvider
+        // The page will show the login button automatically
       }
     }
     return Promise.reject(error);
