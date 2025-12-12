@@ -93,3 +93,14 @@ export async function optionalAuthAzure(
   }
 }
 
+/**
+ * Combined authentication and authorization middleware
+ * Verifies token and checks for required roles
+ */
+export function authAzure(requiredRoles: string[]) {
+  return [
+    authenticateAzure,
+    requireRole(...requiredRoles)
+  ];
+}
+
