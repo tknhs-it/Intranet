@@ -14,8 +14,8 @@ The project is divided into 9 sprints covering V1 (must-haves), V2 (high-value),
 
 | Sprint | Duration | Focus | Status |
 |--------|----------|-------|--------|
-| Sprint 1 | 2 weeks | Infrastructure & Auth | 🟡 In Progress (60%) |
-| Sprint 2 | 2 weeks | Dashboard | 🟡 In Progress (50%) |
+| Sprint 1 | 2 weeks | Infrastructure & Auth | 🟡 In Progress (85%) |
+| Sprint 2 | 2 weeks | Dashboard | 🟡 In Progress (65%) |
 | Sprint 3 | 1.5 weeks | Staff Directory | 📋 Planned |
 | Sprint 4 | 1.5 weeks | Polish & Testing | 📋 Planned |
 
@@ -42,15 +42,22 @@ The project is divided into 9 sprints covering V1 (must-haves), V2 (high-value),
 
 ### Sprint 1: V1 Foundation
 **Issues**: See `.github/ISSUE_TEMPLATE/sprint-1-v1-foundation.md`
-**Status**: 🟡 In Progress (60% Complete)
+**Status**: 🟡 In Progress (85% Complete)
 
 **Completed:**
 - ✅ CASES ETL production-ready (error recovery, notifications, monitoring)
 - ✅ Schema loader from relationships.json
 - ✅ Database schema defined
-- ✅ Authentication middleware structure
+- ✅ **SQL Server setup and connection** ✅
+- ✅ **Database migrations completed** ✅
+- ✅ **Seed data loaded** ✅
+- ✅ **Backend server running** ✅
+- ✅ **Frontend server running** ✅
+- ✅ Authentication middleware structure (authAzure fixed)
 - ✅ Teacher login flow documented
 - ✅ Error handling and health checks
+- ✅ **API endpoints tested** ✅
+- ✅ **Health checks operational** ✅
 
 **In Progress:**
 - ⚠️ Azure AD app registrations (needs setup)
@@ -59,14 +66,13 @@ The project is divided into 9 sprints covering V1 (must-haves), V2 (high-value),
 - ⚠️ Graph API permissions
 
 **Remaining:**
-- Database migrations
-- End-to-end authentication testing
+- End-to-end authentication testing (waiting on Azure AD)
 - Compass API testing
 - Graph API testing
 
 ### Sprint 2: V1 Dashboard
 **Issues**: See `.github/ISSUE_TEMPLATE/sprint-2-v1-dashboard.md`
-**Status**: 🟡 In Progress (50% Complete)
+**Status**: 🟡 In Progress (65% Complete)
 
 **Completed:**
 - ✅ Homepage layout implemented (matches wireframe)
@@ -75,6 +81,9 @@ The project is divided into 9 sprints covering V1 (must-haves), V2 (high-value),
 - ✅ Frontend authentication flow
 - ✅ Timetable display structure
 - ✅ Teacher login flow documented
+- ✅ **Frontend server running** ✅
+- ✅ **Backend API operational** ✅
+- ✅ **Database queries working** ✅
 
 **In Progress:**
 - ⚠️ Daily Org PDF integration (SharePoint)
@@ -83,7 +92,7 @@ The project is divided into 9 sprints covering V1 (must-haves), V2 (high-value),
 - ⚠️ Staff absences from Compass
 
 **Remaining:**
-- End-to-end data flow testing
+- End-to-end data flow testing (waiting on Azure AD)
 - Real Compass data integration
 - Graph API photo display
 - Staff absences display
