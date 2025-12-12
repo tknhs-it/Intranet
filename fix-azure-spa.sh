@@ -29,19 +29,21 @@ echo "📋 Current configuration:"
 az ad app show --id $FRONTEND_APP_ID --query "{spa:spa,web:web}" -o json
 
 echo ""
-echo "🔧 Adding SPA platform..."
+echo "🔧 Configuring as SPA platform..."
 
-# Add SPA redirect URI
-az ad app update --id $FRONTEND_APP_ID \
-    --spa-redirect-uris "$REDIRECT_URI" \
-    --enable-id-token-issuance true
+# Update app manifest to use SPA instead of Web
+# First, get current manifest
+MANIFEST=$(az ad app show --id $FRONTEND_APP_ID --query "spa" -o json)
+
+# Update to use SPA platform with redirect URI
+az ad app update --id $FRONTEND_APP_ID --set "spa.redirectUris=[\"$REDIRECT_URI\"]"
+
+# Remove Web platform redirect URIs (SPA should not use Web)
+echo "🔧 Removing Web platform redirect URIs..."
+az ad app update --id $FRONTEND_APP_ID --set "web.redirectUris=[]"
 
 echo "✅ SPA platform configured"
 echo ""
-
-# Remove Web platform if it exists (SPA should not use Web)
-echo "🔧 Removing Web platform (if exists)..."
-az ad app update --id $FRONTEND_APP_ID --web-redirect-uris "" 2>/dev/null || echo "  No Web platform to remove"
 
 echo ""
 echo "✅ Configuration updated!"
