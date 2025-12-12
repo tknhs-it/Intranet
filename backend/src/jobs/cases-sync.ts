@@ -86,11 +86,7 @@ async function initializeRedis(): Promise<boolean> {
           port: REDIS_PORT,
         },
         concurrency: 1, // Only one ETL job at a time
-        attempts: 3, // Retry failed jobs up to 3 times
-        backoff: {
-          type: 'exponential',
-          delay: 5000, // Start with 5 second delay
-        },
+        // Note: Retry attempts are configured on the job, not the worker
       }
     );
 
@@ -157,7 +153,13 @@ export async function triggerEtl() {
   }
 
   // Redis available, use queue
-  const job = await queue.add('manual-cases-etl', {});
+  const job = await queue.add('manual-cases-etl', {}, {
+    attempts: 3, // Retry failed jobs up to 3 times
+    backoff: {
+      type: 'exponential',
+      delay: 5000, // Start with 5 second delay
+    },
+  });
   logger.info({ jobId: job.id }, 'Triggered manual CASES ETL via queue');
   return job;
 }
