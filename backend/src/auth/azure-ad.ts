@@ -61,11 +61,21 @@ export async function verifyAzureToken(token: string): Promise<AzureADToken> {
       },
       (err, decoded) => {
         if (err) {
+          // Try to decode token without verification to see what audience it has
+          let actualAudience = 'unknown';
+          try {
+            const unverified = jwt.decode(token, { complete: false }) as any;
+            actualAudience = unverified?.aud || 'unknown';
+          } catch (decodeErr) {
+            // Ignore decode errors
+          }
+          
           // Log detailed error for debugging
           console.error('JWT verification error:', {
             message: err.message,
             name: err.name,
             expectedAudience: `api://${AZURE_CLIENT_ID}`,
+            actualAudience: actualAudience,
             expectedIssuer: AZURE_ISSUER,
           });
           return reject(new Error(`Token verification failed: ${err.message}`));
