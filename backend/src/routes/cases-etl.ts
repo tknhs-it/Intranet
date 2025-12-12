@@ -33,7 +33,7 @@ router.get('/metrics', asyncHandler(async (req, res) => {
  * POST /api/cases-etl/trigger
  * Manually trigger ETL (requires admin role)
  */
-router.post('/trigger', authAzure(['ADMIN', 'IT']), asyncHandler(async (req, res) => {
+router.post('/trigger', ...authAzure(['ADMIN', 'IT']), asyncHandler(async (req, res) => {
   const job = await triggerEtl();
   res.json({
     message: 'ETL job triggered',

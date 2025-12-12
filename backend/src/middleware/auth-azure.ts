@@ -96,8 +96,9 @@ export async function optionalAuthAzure(
 /**
  * Combined authentication and authorization middleware
  * Verifies token and checks for required roles
+ * Returns an array of middleware functions that can be spread in Express routes
  */
-export function authAzure(requiredRoles: string[]) {
+export function authAzure(requiredRoles: string[]): [typeof authenticateAzure, ReturnType<typeof requireRole>] {
   return [
     authenticateAzure,
     requireRole(...requiredRoles)
