@@ -30,15 +30,27 @@ router.get('/merged', async (req: AuthenticatedRequest, res) => {
     let staff = null;
 
     // Try to find by email first (most reliable)
+    // Note: SQL Server doesn't support mode: 'insensitive', so we do case-insensitive matching manually
     if (userEmail) {
+      // Try exact match first
       staff = await prisma.user.findFirst({
         where: {
-          email: {
-            equals: userEmail,
-            mode: 'insensitive', // Case-insensitive match
-          },
+          email: userEmail,
         },
       });
+      
+      // If not found, try case-insensitive match using raw query (SQL Server compatible)
+      if (!staff) {
+        const result = await prisma.$queryRaw<Array<{ id: string }>>`
+          SELECT id FROM "User" 
+          WHERE LOWER(email) = LOWER(${userEmail})
+        `;
+        if (result.length > 0) {
+          staff = await prisma.user.findUnique({
+            where: { id: result[0].id },
+          });
+        }
+      }
     }
 
     // If not found and we have Azure object ID, try that
