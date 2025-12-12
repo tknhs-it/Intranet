@@ -39,6 +39,7 @@ app.use('/api/sharepoint', require('./routes/sharepoint').default);
 app.use('/api/dashboard', require('./routes/dashboard-merged').default);
 app.use('/api/daily-org', require('./routes/daily-org').default);
 app.use('/api/cases-etl', require('./routes/cases-etl').default);
+app.use('/api/debug', require('./routes/debug').default);
 
 // Error handling middleware (404 handler must come before error handler)
 app.use(notFoundHandler);
