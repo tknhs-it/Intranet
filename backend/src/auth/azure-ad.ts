@@ -70,14 +70,26 @@ export async function verifyAzureToken(token: string): Promise<AzureADToken> {
   const actualAudience = payload?.aud || 'unknown';
   const actualIssuer = payload?.iss || 'unknown';
 
+  // Azure AD tokens can have audience as either:
+  // - api://<app-id> (when scope is api://<app-id>/<scope>)
+  // - <app-id> (just the app ID without api:// prefix)
+  // We need to accept both formats
+  const expectedAudienceWithPrefix = `api://${AZURE_CLIENT_ID}`;
+  const expectedAudienceWithoutPrefix = AZURE_CLIENT_ID;
+  const audienceMatches = 
+    actualAudience === expectedAudienceWithPrefix || 
+    actualAudience === expectedAudienceWithoutPrefix;
+
   return new Promise((resolve, reject) => {
+    // First verify signature and issuer
     jwt.verify(
       token,
       getKey,
       {
-        audience: `api://${AZURE_CLIENT_ID}`,
         issuer: AZURE_ISSUER,
         algorithms: ['RS256'],
+        // Don't verify audience here - we'll check it manually
+        audience: false as any,
       },
       (err, decoded) => {
         if (err) {
@@ -85,7 +97,7 @@ export async function verifyAzureToken(token: string): Promise<AzureADToken> {
           console.error('JWT verification error:', {
             message: err.message,
             name: err.name,
-            expectedAudience: `api://${AZURE_CLIENT_ID}`,
+            expectedAudience: expectedAudienceWithPrefix,
             actualAudience: actualAudience,
             expectedIssuer: AZURE_ISSUER,
             actualIssuer: actualIssuer,
@@ -93,6 +105,16 @@ export async function verifyAzureToken(token: string): Promise<AzureADToken> {
             tokenExpiry: payload?.exp ? new Date(payload.exp * 1000).toISOString() : 'unknown',
           });
           return reject(new Error(`Token verification failed: ${err.message}`));
+        }
+
+        // Now manually verify audience (accepting both formats)
+        if (!audienceMatches) {
+          console.error('JWT audience mismatch:', {
+            expectedAudience: expectedAudienceWithPrefix,
+            actualAudience: actualAudience,
+            message: 'Token audience does not match expected value',
+          });
+          return reject(new Error(`Token verification failed: jwt audience invalid. expected: ${expectedAudienceWithPrefix} or ${expectedAudienceWithoutPrefix}, got: ${actualAudience}`));
         }
         
         const verifiedToken = decoded as AzureADToken;
@@ -105,6 +127,7 @@ export async function verifyAzureToken(token: string): Promise<AzureADToken> {
             oid: verifiedToken.oid,
             email: verifiedToken.email,
             exp: new Date(verifiedToken.exp * 1000).toISOString(),
+            scopes: payload?.scp || payload?.roles || 'none',
           });
         }
         
