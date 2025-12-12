@@ -61,9 +61,30 @@ export async function verifyAzureToken(token: string): Promise<AzureADToken> {
       },
       (err, decoded) => {
         if (err) {
+          // Log detailed error for debugging
+          console.error('JWT verification error:', {
+            message: err.message,
+            name: err.name,
+            expectedAudience: `api://${AZURE_CLIENT_ID}`,
+            expectedIssuer: AZURE_ISSUER,
+          });
           return reject(new Error(`Token verification failed: ${err.message}`));
         }
-        resolve(decoded as AzureADToken);
+        
+        const token = decoded as AzureADToken;
+        
+        // Log token details in development
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Token verified successfully:', {
+            aud: token.aud,
+            iss: token.iss,
+            oid: token.oid,
+            email: token.email,
+            exp: new Date(token.exp * 1000).toISOString(),
+          });
+        }
+        
+        resolve(token);
       }
     );
   });

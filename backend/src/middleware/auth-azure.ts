@@ -37,8 +37,24 @@ export async function authenticateAzure(
 
     next();
   } catch (error: any) {
-    logger.error({ error: error.message }, 'Authentication failed');
-    return res.status(401).json({ error: 'Invalid or expired token' });
+    logger.error({ 
+      error: error.message,
+      stack: error.stack,
+      path: req.path,
+      method: req.method,
+    }, 'Authentication failed');
+    
+    // Return more detailed error in development
+    const errorMessage = process.env.NODE_ENV === 'development' 
+      ? `Invalid or expired token: ${error.message}`
+      : 'Invalid or expired token';
+    
+    return res.status(401).json({ 
+      error: errorMessage,
+      ...(process.env.NODE_ENV === 'development' && {
+        details: error.message,
+      }),
+    });
   }
 }
 
