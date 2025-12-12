@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test MSAL Login</title>
+</head>
+<body>
+  <h1>MSAL Configuration Test</h1>
+  <div id="status"></div>
+  <button onclick="testLogin()">Test Login</button>
+  
+  <script type="module">
+    import { PublicClientApplication } from 'https://cdn.jsdelivr.net/npm/@azure/msal-browser@3.7.0/dist/msal-browser.esm.js';
+    
+    const msalConfig = {
+      auth: {
+        clientId: '5a3d729b-2165-4f5b-90d8-0e8673d1931e',
+        authority: 'https://login.microsoftonline.com/348841ce-b851-46d7-a6b2-96bba96fea69',
+        redirectUri: window.location.origin,
+      },
+    };
+    
+    const msalInstance = new PublicClientApplication(msalConfig);
+    
+    window.testLogin = async () => {
+      try {
+        await msalInstance.initialize();
+        const accounts = msalInstance.getAllAccounts();
+        if (accounts.length > 0) {
+          document.getElementById('status').innerHTML = 'Already logged in: ' + accounts[0].username;
+        } else {
+          await msalInstance.loginRedirect({
+            scopes: ['api://d8ecaa47-a809-4a7d-b494-d66301d005c4/access_as_user', 'User.Read']
+          });
+        }
+      } catch (error) {
+        document.getElementById('status').innerHTML = 'Error: ' + error.message;
+      }
+    };
+    
+    // Handle redirect
+    msalInstance.initialize().then(() => {
+      msalInstance.handleRedirectPromise().then((response) => {
+        if (response) {
+          document.getElementById('status').innerHTML = 'Login successful: ' + response.account.username;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
