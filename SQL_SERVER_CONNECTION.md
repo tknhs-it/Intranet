@@ -3,15 +3,20 @@
 ## ✅ Configuration Complete
 
 **Server Details:**
-- Host: `nhssql`
+- Host: `nhssql.curric.nossalhs.vic.edu.au` (or `nhssql.curric.nossal-hs.wan`)
 - Database: `nossal_intranet`
 - Username: `nhssql`
 - Password: `NHS8865sql`
 - Port: `1433` (default)
 
-**Connection String:**
+**Connection String (FQDN):**
 ```
-sqlserver://nhssql:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true
+sqlserver://nhssql.curric.nossalhs.vic.edu.au:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true
+```
+
+**Connection String (WAN - alternative):**
+```
+sqlserver://nhssql.curric.nossal-hs.wan:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true
 ```
 
 ## ✅ Schema Updated
@@ -54,12 +59,17 @@ sqlserver://nhssql:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql
 
 ### Try These Fixes:
 
-**Option 1: Use FQDN**
+**Option 1: Use FQDN (Primary)**
 ```env
-DATABASE_URL=sqlserver://nhssql.nossalhs.vic.edu.au:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true
+DATABASE_URL=sqlserver://nhssql.curric.nossalhs.vic.edu.au:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true
 ```
 
-**Option 2: Use IP Address**
+**Option 2: Use WAN Name (Alternative)**
+```env
+DATABASE_URL=sqlserver://nhssql.curric.nossal-hs.wan:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true
+```
+
+**Option 3: Use IP Address**
 ```env
 # If you know the IP address
 DATABASE_URL=sqlserver://192.168.1.100:1433;database=nossal_intranet;user=nhssql;password=NHS8865sql;encrypt=true;trustServerCertificate=true
@@ -81,21 +91,23 @@ DATABASE_URL=sqlserver://nhssql:1433;database=nossal_intranet;user=nhssql;passwo
 
 ### Test 1: Ping Server
 ```bash
-ping nhssql
+ping nhssql.curric.nossalhs.vic.edu.au
 # Or
-ping nhssql.nossalhs.vic.edu.au
+ping nhssql.curric.nossal-hs.wan
 ```
 
 ### Test 2: Test Port
 ```bash
-telnet nhssql 1433
+telnet nhssql.curric.nossalhs.vic.edu.au 1433
 # Or
-nc -zv nhssql 1433
+nc -zv nhssql.curric.nossalhs.vic.edu.au 1433
 ```
 
 ### Test 3: Test with sqlcmd (if available)
 ```bash
-sqlcmd -S nhssql -U nhssql -P NHS8865sql -d nossal_intranet -Q "SELECT @@VERSION"
+sqlcmd -S nhssql.curric.nossalhs.vic.edu.au -U nhssql -P NHS8865sql -d nossal_intranet -Q "SELECT @@VERSION"
+# Or with WAN name:
+sqlcmd -S nhssql.curric.nossal-hs.wan -U nhssql -P NHS8865sql -d nossal_intranet -Q "SELECT @@VERSION"
 ```
 
 ### Test 4: Test with Node.js
