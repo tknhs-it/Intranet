@@ -117,7 +117,24 @@ router.get('/merged', async (req: AuthenticatedRequest, res) => {
       tasks,
     });
   } catch (error: any) {
-    res.status(500).json({ error: error.message });
+    logger.error({ 
+      error: error.message,
+      stack: error.stack,
+      userId: req.userId,
+      email: req.user?.email || req.user?.preferred_username,
+    }, 'Dashboard error');
+    
+    // Return more detailed error in development
+    const errorMessage = process.env.NODE_ENV === 'development' 
+      ? error.message
+      : 'An error occurred while fetching dashboard data';
+    
+    res.status(500).json({ 
+      error: errorMessage,
+      ...(process.env.NODE_ENV === 'development' && {
+        stack: error.stack,
+      }),
+    });
   }
 });
 
