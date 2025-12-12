@@ -50,6 +50,26 @@ export interface AzureADToken {
  * Verify Azure AD JWT token
  */
 export async function verifyAzureToken(token: string): Promise<AzureADToken> {
+  // First, try to decode the token without verification to inspect it
+  let decodedToken: any = null;
+  try {
+    decodedToken = jwt.decode(token, { complete: true });
+    if (!decodedToken) {
+      throw new Error('Token decode returned null');
+    }
+  } catch (decodeErr: any) {
+    console.error('Failed to decode token:', {
+      error: decodeErr.message,
+      tokenLength: token.length,
+      tokenPreview: token.substring(0, 50) + '...',
+    });
+    throw new Error(`Invalid token format: ${decodeErr.message}`);
+  }
+
+  const payload = decodedToken.payload as any;
+  const actualAudience = payload?.aud || 'unknown';
+  const actualIssuer = payload?.iss || 'unknown';
+
   return new Promise((resolve, reject) => {
     jwt.verify(
       token,
@@ -61,40 +81,34 @@ export async function verifyAzureToken(token: string): Promise<AzureADToken> {
       },
       (err, decoded) => {
         if (err) {
-          // Try to decode token without verification to see what audience it has
-          let actualAudience = 'unknown';
-          try {
-            const unverified = jwt.decode(token, { complete: false }) as any;
-            actualAudience = unverified?.aud || 'unknown';
-          } catch (decodeErr) {
-            // Ignore decode errors
-          }
-          
-          // Log detailed error for debugging
+          // Log detailed error with actual token values
           console.error('JWT verification error:', {
             message: err.message,
             name: err.name,
             expectedAudience: `api://${AZURE_CLIENT_ID}`,
             actualAudience: actualAudience,
             expectedIssuer: AZURE_ISSUER,
+            actualIssuer: actualIssuer,
+            tokenScopes: payload?.scp || payload?.roles || 'none',
+            tokenExpiry: payload?.exp ? new Date(payload.exp * 1000).toISOString() : 'unknown',
           });
           return reject(new Error(`Token verification failed: ${err.message}`));
         }
         
-        const token = decoded as AzureADToken;
+        const verifiedToken = decoded as AzureADToken;
         
         // Log token details in development
         if (process.env.NODE_ENV === 'development') {
           console.log('Token verified successfully:', {
-            aud: token.aud,
-            iss: token.iss,
-            oid: token.oid,
-            email: token.email,
-            exp: new Date(token.exp * 1000).toISOString(),
+            aud: verifiedToken.aud,
+            iss: verifiedToken.iss,
+            oid: verifiedToken.oid,
+            email: verifiedToken.email,
+            exp: new Date(verifiedToken.exp * 1000).toISOString(),
           });
         }
         
-        resolve(token);
+        resolve(verifiedToken);
       }
     );
   });
