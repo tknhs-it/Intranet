@@ -34,11 +34,22 @@ router.get('/metrics', asyncHandler(async (req, res) => {
  * Manually trigger ETL (requires admin role)
  */
 router.post('/trigger', ...authAzure(['ADMIN', 'IT']), asyncHandler(async (req, res) => {
-  const job = await triggerEtl();
-  res.json({
-    message: 'ETL job triggered',
-    jobId: job.id,
-  });
+  const result = await triggerEtl();
+  
+  if (result && typeof result === 'object' && 'id' in result) {
+    // Direct execution (Redis not available)
+    res.json({
+      message: 'ETL job completed directly (Redis not available)',
+      jobId: result.id,
+      result: (result as any).result,
+    });
+  } else {
+    // Queued execution (Redis available)
+    res.json({
+      message: 'ETL job triggered',
+      jobId: (result as any).id,
+    });
+  }
 }));
 
 export default router;
