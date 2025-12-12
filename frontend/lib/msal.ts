@@ -45,9 +45,16 @@ export const msalConfig: Configuration = {
  * IMPORTANT: The scope must match the backend API app ID
  * Format: api://<backend-app-id>/access_as_user
  */
+const API_SCOPE = process.env.NEXT_PUBLIC_AZURE_API_SCOPE || 'api://d8ecaa47-a809-4a7d-b494-d66301d005c4/access_as_user';
+
+// Log the scope being used (for debugging)
+if (typeof window !== 'undefined') {
+  console.log('🔑 MSAL API Scope:', API_SCOPE);
+}
+
 export const loginRequest = {
   scopes: [
-    process.env.NEXT_PUBLIC_AZURE_API_SCOPE || 'api://d8ecaa47-a809-4a7d-b494-d66301d005c4/access_as_user',
+    API_SCOPE,
     'User.Read',
   ],
 };
