@@ -49,10 +49,30 @@ export function useAuth() {
 
   const logout = async () => {
     try {
-      await instance.logoutRedirect()
+      // Clear all accounts and tokens from cache
+      const accounts = instance.getAllAccounts()
+      if (accounts.length > 0) {
+        await instance.logoutRedirect({
+          account: accounts[0],
+          postLogoutRedirectUri: window.location.origin,
+        })
+      } else {
+        // If no accounts, just clear cache
+        instance.clearCache()
+        window.location.reload()
+      }
     } catch (error) {
       console.error('Logout failed:', error)
+      // Fallback: clear cache and reload
+      instance.clearCache()
+      window.location.reload()
     }
+  }
+  
+  const clearCache = () => {
+    instance.clearCache()
+    setAccessToken(null)
+    window.location.reload()
   }
 
   return {
@@ -61,6 +81,7 @@ export function useAuth() {
     accessToken,
     login,
     logout,
+    clearCache,
   }
 }
 
