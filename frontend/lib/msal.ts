@@ -42,10 +42,12 @@ export const msalConfig: Configuration = {
 
 /**
  * Login request configuration
+ * IMPORTANT: The scope must match the backend API app ID
+ * Format: api://<backend-app-id>/access_as_user
  */
 export const loginRequest = {
   scopes: [
-    process.env.NEXT_PUBLIC_AZURE_API_SCOPE || 'api://nossal-intranet/access_as_user',
+    process.env.NEXT_PUBLIC_AZURE_API_SCOPE || 'api://d8ecaa47-a809-4a7d-b494-d66301d005c4/access_as_user',
     'User.Read',
   ],
 };
